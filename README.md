@@ -118,3 +118,10 @@ And here are my findings for how the varialbes have affected the Fatality counts
 ![Fatality](https://github.com/jaotheboss/Covid-19-Clustering/blob/master/Visualisations/ANOVA%20for%20Fatalities.png)
 
 It can be seen in both cases at the Social Progress Index (SPI), Education Index (EI) and Flight Counts have a p-value of < 0.05 and therefore imply that these variables are statistically significant in affecting the Confirmed Cases and Fatality counts. 
+
+However, what is even more interesting to me is the fact that GDP and Healthcare Expenditure has a p-value of around 0.9. This implies that those variables have no statistically relationship with the response variables (the Confirmed Cases and Fatality counts). Meaning to say that regardless of how much money you are earning or how much money you are pumping into the healthcare industry, the coronavirus situation would still spread as it did, statistically speaking. 
+
+## Conclusion:
+
+I think it would be more interesting to further explore this dataset using a more sociological and psychological perspective. 
+Given that the indicators that have statistical significance to the cases are those that have ties with social aspects. Something interesting to explore as well would be the political variables of a country. Maybe how fond they are of their government, what kind of political philosophy a country is following, etc. 

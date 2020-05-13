@@ -30,38 +30,6 @@ data.loc[data['Province_State'] == 'Hong Kong', 'Country_Region'] = ['Hong Kong'
 
 # drop province and id columns
 data.drop(['Id', 'Province_State'], axis = 1, inplace = True)
-
-"""# convert string date to actualy datetime object
-data['Date'] = [datetime.datetime.strptime(x, '%Y-%m-%d') for x in data['Date']]
-
-# we want to cut group the dates together
-len(data['Date'].unique()) # 97 days altogether
-## we'll group them by the week
-countries = list(data['Country_Region'].unique())
-timeseries_data = pd.DataFrame()
-for country in countries:
-       country_data = data.loc[data['Country_Region'] == country, ['Date', 'ConfirmedCases', 'Fatalities']]
-       country_data = country_data.groupby(pd.Grouper(key = 'Date', freq = '7D')).mean().reset_index()
-       country_data['Country'] = [country]*len(country_data.index)
-       country_data = country_data.reindex(columns = ['Country', 'Date', 'ConfirmedCases', 'Fatalities'])
-       
-       timseries_data = timeseries_data.append(country_data)
-
-timeseries_data = timeseries_data.melt(id_vars = ['Country', 'Date'], 
-                               value_vars = ['ConfirmedCases', 'Fatalities'], 
-                               var_name = 'Status', 
-                               value_name = 'Value')
-
-### Example of using time series data
-sg_data = timeseries_data.loc[timeseries_data['Country'] == 'Singapore', :]
-
-import seaborn as sns
-
-plot = sns.relplot(y = 'Value', x = 'Date', data = sg_data, col = 'Status', markers = True)
-plot.set(xlim = [sg_data['Date'].unique()[0], sg_data['Date'].unique()[-1]])
-for ax in plot.axes.flat:
-       for label in ax.get_xticklabels():
-              label.set_rotation(30)"""
               
 # now we only take the latest confirmed case values
 current_data = data.groupby('Country_Region').max()

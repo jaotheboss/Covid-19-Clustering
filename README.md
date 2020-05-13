@@ -127,3 +127,4 @@ However, what is even more interesting to me is the fact that GDP and Healthcare
 
 I think it would be more interesting to further explore this dataset using a more sociological and psychological perspective. 
 Given that the indicators that have statistical significance to the cases are those that have ties with social aspects. Something interesting to explore as well would be the political variables of a country. Maybe how fond they are of their government, what kind of political philosophy a country is following, etc. 
+The original idea for a Covid-19 project was to do a time series analysis, however, while I was doing that, I realized that there were plenty of projects out there that already explored the the dataset in the perspective of a time series. That is why I decided to do something a little different. I hope to one day brush up on my critical thinking to further explore this dataset. Till then, this is all I have.

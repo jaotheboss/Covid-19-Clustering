@@ -1,6 +1,7 @@
 # Covid-19-Clustering
 Analysis and clustering of some Covid-19 datasets that I have found and scraped from online
 
+![Covid-19](https://github.com/jaotheboss/Covid-19-Clustering/blob/master/covid-19.jpeg)
 
 ## Objective:
 To simply explore the Covid-19 dataset and implement a clustering algorithm to further dig out interesting insights.

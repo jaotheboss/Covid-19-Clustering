@@ -4,17 +4,6 @@
 Created on Mon Mar 30 22:59:02 2020
 
 @author: jaoming
-
-To do:
-       - Get education data
-
-Total data used:
-- Density
-- Flights
-- Spending
-- Earning
-- SPI
-- Education?
 """
 
 import os
@@ -248,7 +237,7 @@ kmeans = KMeans()
 visualizer = KElbowVisualizer(kmeans, k = (2, 10))
 visualizer.fit(merged.loc[:, merged.columns != 'Country'])
 
-kmeans = KMeans(n_clusters = 10)
+kmeans = KMeans(n_clusters = 7)
 visualizer = SilhouetteVisualizer(kmeans, colors = 'yellowbrick')
 visualizer.fit(merged.loc[:, merged.columns != 'Country'])
 
@@ -282,7 +271,7 @@ hclust = AgglomerativeClustering(n_clusters = None, distance_threshold = 0)
 hclust.fit(ufit_df.loc[:, ufit_df.columns != 'Country'])
 plot_dendrogram(hclust)
 
-hclust = AgglomerativeClustering(n_clusters = 5, distance_threshold = None)
+hclust = AgglomerativeClustering(n_clusters = 4, distance_threshold = None)
 hclust_labels = hclust.fit_predict(ufit_df.loc[:, ufit_df.columns != 'Country'])
 
 ## do the same with the kmeans data
@@ -290,7 +279,7 @@ kmeans = KMeans()
 visualizer = KElbowVisualizer(kmeans, k = (2, 10))
 visualizer.fit(ufit_df.loc[:, ufit_df.columns != 'Country'])
 
-kmeans = KMeans(n_clusters = 5)
+kmeans = KMeans(n_clusters = 6)
 visualizer = SilhouetteVisualizer(kmeans, colors = 'yellowbrick')
 visualizer.fit(ufit_df.loc[:, ufit_df.columns != 'Country'])
 
@@ -309,6 +298,3 @@ utransform_df['Value'] = [float(i) for i in utransform_df['Value']]
 
 plot = sns.FacetGrid(utransform_df, col = 'Indicator', col_wrap = 4, sharey = False)
 plot.map(sns.barplot, 'Cluster', 'Value')
-
-# uscaled_df.to_csv('data.csv', index = False)
-

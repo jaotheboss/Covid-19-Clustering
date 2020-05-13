@@ -7,7 +7,7 @@ To simply explore the Covid-19 dataset and implement a clustering algorithm to f
 
 ## Datasets:
 
-  1. Main Covid-19 Dataset is from Kaggle. I participated in their competition to scan their dataset
+  1. Covid-19 Dataset (kaggle)
   2. Education Index (.csv)
   3. Healthcare Expenditure (.csv)
   4. Social Progress Index (pdf scraping)
@@ -52,7 +52,7 @@ Through my search, I have decided to settle for 6 different indicators:
       
       - Measured using the [Social Progress Index (SPI)](https://en.wikipedia.org/wiki/Social_Progress_Index) which measures the extent to which countries provide for the social and environmental needs of their citizens
   
-This process took up the bulk of my time as I was new to scraping data off PDFs.
+This process took up the bulk of my time as I was new to scraping data off PDFs. Something I considered when I was looking for data was how up to date they were. The main Covid-19 dataset listed the final count of Confirmed Cases and Fatalities at the end of **April 2020**, and therefore I had to make sure the data collected were still relevant. 
 
 
 One thing I noticed throughout all the datasets is that the **namings of the countries were inconsistent**.
